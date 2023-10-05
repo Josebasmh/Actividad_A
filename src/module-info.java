@@ -14,4 +14,5 @@ module Actividad_A {
 	requires javafx.graphics;
 	
 	opens application to javafx.graphics, javafx.fxml;
+	opens controller to javafx.graphics, javafx.fxml;
 }
