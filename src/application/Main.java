@@ -14,8 +14,10 @@ public class Main extends Application{
 		VBox root;
 		try {
 			root = (VBox)FXMLLoader.load(getClass().getResource("/fxml/Encuesta.fxml"));
-			Scene scene = new Scene(root,400,400); 
+			Scene scene = new Scene(root,800,800); 
 			stage.setScene(scene);
+			stage.setMinHeight(800);
+			stage.setMinWidth(800);
 			stage.show();
 		} catch (IOException e) {
 			System.out.println("La ventana no se abrió correctamente.");

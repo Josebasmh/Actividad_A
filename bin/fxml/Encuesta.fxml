@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="800.0" minWidth="800.0" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ActividadAController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ActividadAController">
    <children>
       <Label fx:id="titulo" text="ENCUESTA">
          <font>
@@ -71,7 +71,7 @@
             <Insets left="10.0" right="10.0" />
          </padding>
       </HBox>
-      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
             <Label fx:id="lblSexo" text="Sexo: ">
                <font>
@@ -118,7 +118,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <ListView fx:id="lsvDeporte" disable="true" prefHeight="200.0" prefWidth="200.0" />
+                  <ListView fx:id="lsvDeporte" disable="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" />
                </children>
                <HBox.margin>
                   <Insets left="20.0" />
@@ -134,7 +134,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <GridPane alignment="CENTER" prefHeight="150.0" prefWidth="809.0">
+      <GridPane alignment="CENTER" prefHeight="200.0" prefWidth="809.0">
         <columnConstraints>
           <ColumnConstraints />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="381.0" minWidth="10.0" prefWidth="189.0" />
@@ -151,7 +151,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Slider fx:id="sldCompras" max="10.0" min="1.0" showTickLabels="true" GridPane.columnIndex="2">
+            <Slider fx:id="sldCompras" blockIncrement="1.0" majorTickUnit="10.0" max="10.0" min="1.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" value="1.0" GridPane.columnIndex="2">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
