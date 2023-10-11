@@ -1,18 +1,19 @@
 package controller;
 
-import java.awt.event.ActionEvent;
+
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Slider;
@@ -50,8 +51,10 @@ public class ActividadAController implements Initializable{
     @FXML
     private TextField txtProfesion;
 
+    @FXML
     public void mostrar(ActionEvent event) {
-    	try {
+    	
+		try {
     		
     		// Recogida de datos
     		String profesion = txtProfesion.getText();
@@ -79,6 +82,15 @@ public class ActividadAController implements Initializable{
     		
     	}catch(Exception e) {
     		e.printStackTrace();
+    	}
+    }
+    
+    @FXML
+    public void activar(ActionEvent event) {
+    	if (chbDeporte.isSelected()) {
+    		lsvDeporte.setDisable(false);
+    	}else {
+    		lsvDeporte.setDisable(true);
     	}
     }
     

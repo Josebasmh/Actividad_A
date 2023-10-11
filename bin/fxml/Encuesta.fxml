@@ -106,7 +106,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <CheckBox fx:id="chbDeporte" mnemonicParsing="false" text="¿Práctica algún deporte?">
+            <CheckBox fx:id="chbDeporte" mnemonicParsing="false" onAction="#activar" text="¿Práctica algún deporte?">
                <font>
                   <Font size="20.0" />
                </font>
@@ -178,7 +178,7 @@
       </GridPane>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button fx:id="btnAceptar" mnemonicParsing="false" text="ACEPTAR">
+            <Button fx:id="btnAceptar" mnemonicParsing="false" onAction="#mostrar" text="ACEPTAR">
                <HBox.margin>
                   <Insets right="50.0" />
                </HBox.margin>
