@@ -12,6 +12,8 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -22,6 +24,7 @@ import javafx.scene.control.SelectionMode;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.stage.Stage;
 
 public class ActividadAController implements Initializable{
 
@@ -96,6 +99,15 @@ public class ActividadAController implements Initializable{
     	}
     }
     
+    // Metodo(fxml) para cerrar la ventana
+    @FXML
+    void cerrar(ActionEvent event) {
+    	Node source=(Node) event.getSource();
+    	Scene sce= source.getScene();
+    	Stage sta= (Stage)sce.getWindow();
+    	sta.close();
+    }
+
     // Metodo para que al inicializar cargue el combobox de edad y la lista de deportes
     public void initialize(URL arg0, ResourceBundle arg1) {
     	
