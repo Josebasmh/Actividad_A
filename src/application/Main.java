@@ -6,9 +6,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
+/**
+ * Clase donde se inicia la aplicación.
+ */
 public class Main extends Application{
-	
+	/**
+	 * Se crea y configura el VBox con el fxml asociado y creamos una escena de 800x800.
+	 * Se añade al stage y lo mostamos. Captura La excepción que se puede generar.
+	 */
 	public void start(Stage stage) {
 		stage.setTitle("ENCUESTA"); 
 		VBox root;

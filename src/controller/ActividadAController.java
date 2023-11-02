@@ -26,12 +26,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 
+/**
+ * Controlador de la actividad A
+ * Contiene la variable de clase ArrayList de Strings (arrListCamposnulos) para controlar la insercción de datos correcta. 
+ */
 public class ActividadAController implements Initializable{
 
-	/*
-	 * Variable de clase para controlar que la insercción de datos es correcta.
-	 * Se coloca aquí para que pueda utilizarse en distintos metodos.
-	 */
+	//Variable de clase
 	ArrayList<String> arrListCamposnulos = new ArrayList<String>();
 	
 	// Elementos del fxml
@@ -64,7 +65,10 @@ public class ActividadAController implements Initializable{
     @FXML
     private TextField txtProfesion;
     
-    // Metodo(fxml) para mostrar la información insertada
+    /**
+     * Metodo(fxml) para mostrar la información insertada
+     * @param event
+     */
     @FXML
     public void mostrar(ActionEvent event) {
     	
@@ -89,7 +93,10 @@ public class ActividadAController implements Initializable{
     	}
     }
     
-    // Metodo(fxml) para activar y desactivar la lista de deportes mediante un ActionListener de chbDeporte.
+    /**
+     * Metodo(fxml) para activar y desactivar la lista de deportes mediante un ActionListener de chbDeporte.
+     * @param event
+     */
     @FXML
     public void activar(ActionEvent event) {
     	if (chbDeporte.isSelected()) {
@@ -99,7 +106,10 @@ public class ActividadAController implements Initializable{
     	}
     }
     
-    // Metodo(fxml) para cerrar la ventana
+    /**
+     * Metodo(fxml) para cerrar la ventana
+     * @param event
+     */
     @FXML
     void cerrar(ActionEvent event) {
     	Node source=(Node) event.getSource();
@@ -108,7 +118,9 @@ public class ActividadAController implements Initializable{
     	sta.close();
     }
 
-    // Metodo para que al inicializar cargue el combobox de edad y la lista de deportes
+    /**
+     * Metodo para que al inicializar cargue el combobox de edad y la lista de deportes.
+     */
     public void initialize(URL arg0, ResourceBundle arg1) {
     	
     	cmbEdad.setItems( FXCollections.observableArrayList("Menores de 18", "Entre 18 y 30", "Entre 31 y 50", "Entre 51 y 70", "Mayores de 70"));
@@ -118,7 +130,10 @@ public class ActividadAController implements Initializable{
     	lsvDeporte.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
     }
     
-    // Metodo auxiliar que crea una ventana emergente de alerta para mostrar la información
+    /**
+     * Metodo auxiliar que crea una ventana emergente de alerta para mostrar la información
+     * @param mensaje
+     */
     public void mostrarDialogoInformacionSEncabezado(String mensaje) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("TUS DATOS");
@@ -126,7 +141,10 @@ public class ActividadAController implements Initializable{
         alert.showAndWait();
     }
     
-    // Metodo auxiliar para recoger información de la ventana y devolver el mensaje con los datos ordenados
+    /**
+     * Metodo auxiliar para recoger información de la ventana y devolver el mensaje con los datos ordenados
+     * @return String
+     */
     public String crearMensaje() {
     	
     	// Recogida de datos
